@@ -339,11 +339,14 @@ namespace Concentus.Structs
         /// </summary>
         /// <typeparam name="T">The storage type of analysis_pcm, either short or float</typeparam>
         /// <param name="pcm"></param>
+        /// <param name="pcm_ptr"></param>
         /// <param name="frame_size"></param>
         /// <param name="data"></param>
+        /// <param name="data_ptr"></param>
         /// <param name="out_data_bytes"></param>
         /// <param name="lsb_depth"></param>
         /// <param name="analysis_pcm"></param>
+        /// <param name="analysis_pcm_ptr"></param>
         /// <param name="analysis_size"></param>
         /// <param name="c1"></param>
         /// <param name="c2"></param>

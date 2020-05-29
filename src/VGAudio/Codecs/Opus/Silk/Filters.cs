@@ -222,10 +222,12 @@ namespace Concentus.Silk
         /// Second order ARMA filter, alternative implementation
         /// </summary>
         /// <param name="input">I     input signal</param>
+        /// <param name="input_ptr"></param>
         /// <param name="B_Q28">I     MA coefficients [3]</param>
         /// <param name="A_Q28">I     AR coefficients [2]</param>
         /// <param name="S">I/O   State vector [2]</param>
         /// <param name="output">O     output signal</param>
+        /// <param name="output_ptr"></param>
         /// <param name="len">I     signal length (must be even)</param>
         /// <param name="stride">I     Operate on interleaved signal if > 1</param>
         internal static void silk_biquad_alt(
@@ -394,9 +396,11 @@ namespace Concentus.Silk
         /// Split signal into two decimated bands using first-order allpass filters
         /// </summary>
         /// <param name="input">I    Input signal [N]</param>
+        /// <param name="input_ptr"></param>
         /// <param name="S">I/O  State vector [2]</param>
         /// <param name="outL">O    Low band [N/2]</param>
         /// <param name="outH">O    High band [N/2]</param>
+        /// <param name="outH_ptr"></param>
         /// <param name="N">I    Number of input samples</param>
         internal static void silk_ana_filt_bank_1(
             short[] input,
@@ -539,7 +543,7 @@ namespace Concentus.Silk
                 Array.Copy(Tables.silk_Transition_LP_A_Q28[SilkConstants.TRANSITION_INT_NUM - 1], 0, A_Q28, 0, SilkConstants.TRANSITION_NA);
             }
         }
-        
+
         /// <summary>
         /// LPC analysis filter
         /// NB! State is kept internally and the
@@ -547,8 +551,11 @@ namespace Concentus.Silk
         /// first d output samples are set to zero
         /// </summary>
         /// <param name="output">O    Output signal</param>
+        /// <param name="output_ptr"></param>
         /// <param name="input">I    Input signal</param>
+        /// <param name="input_ptr"></param>
         /// <param name="B">I    MA prediction coefficients, Q12 [order]</param>
+        /// <param name="B_ptr"></param>
         /// <param name="len">I    Signal length</param>
         /// <param name="d">I    Filter order</param>
         internal static void silk_LPC_analysis_filter(

@@ -132,6 +132,7 @@ namespace Concentus.Silk
         /// <param name="x">I    Basis signal</param>
         /// <param name="y">I    Target signal</param>
         /// <param name="mid_res_amp_Q0">I/O  Smoothed mid, residual norms</param>
+        /// <param name="mid_res_amp_Q0_ptr"></param>
         /// <param name="length">I    Number of samples</param>
         /// <param name="smooth_coef_Q16">I    Smoothing coefficient</param>
         /// <returns>O    Returns predictor in Q13</returns>
@@ -187,7 +188,9 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="state">I/O  State</param>
         /// <param name="x1">I/O  Left input signal, becomes mid signal</param>
+        /// <param name="x1_ptr"></param>
         /// <param name="x2">I/O  Right input signal, becomes side signal</param>
+        /// <param name="x2_ptr"></param>
         /// <param name="ix">O    Quantization indices [ 2 ][ 3 ]</param>
         /// <param name="mid_only_flag">O    Flag: only mid signal coded</param>
         /// <param name="mid_side_rates_bps">O    Bitrates for mid and side signals</param>
@@ -420,7 +423,9 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="state">I/O  State</param>
         /// <param name="x1">I/O  Left input signal, becomes mid signal</param>
+        /// <param name="x1_ptr"></param>
         /// <param name="x2">I/O  Right input signal, becomes side signal</param>
+        /// <param name="x2_ptr"></param>
         /// <param name="pred_Q13">I    Predictors</param>
         /// <param name="fs_kHz">I    Samples rate (kHz)</param>
         /// <param name="frame_length">I    Number of samples</param>

@@ -148,6 +148,7 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="x_Q10">(O) Output [ order ]</param>
         /// <param name="indices">(I) Quantization indices [ order ]</param>
+        /// <param name="indices_ptr"></param>
         /// <param name="pred_coef_Q8">(I) Backward predictor coefs [ order ]</param>
         /// <param name="quant_step_size_Q16">(I) Quantization step size</param>
         /// <param name="order">(I) Number of input values</param>
@@ -764,6 +765,7 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="o">(O) intermediate polynomial, QA [dd+1]</param>
         /// <param name="cLSF">(I) vector of interleaved 2*cos(LSFs), QA [d]</param>
+        /// <param name="cLSF_ptr"></param>
         /// <param name="dd">(I) polynomial order (= 1/2 * filter order)</param>
         internal static void silk_NLSF2A_find_poly(
             int[] o,

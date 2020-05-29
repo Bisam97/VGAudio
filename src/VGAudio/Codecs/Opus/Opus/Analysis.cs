@@ -146,6 +146,7 @@ namespace Concentus
         /// <param name="tonal"></param>
         /// <param name="celt_mode"></param>
         /// <param name="x"></param>
+        /// <param name="x_ptr"></param>
         /// <param name="len"></param>
         /// <param name="offset"></param>
         /// <param name="c1"></param>

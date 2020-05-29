@@ -92,6 +92,7 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="psEncC">I/O  Encoder state</param>
         /// <param name="pIn">I    PCM input</param>
+        /// <param name="pIn_ptr"></param>
         /// <returns>0 if success</returns>
         internal static int silk_VAD_GetSA_Q8(
             SilkChannelEncoder psEncC,

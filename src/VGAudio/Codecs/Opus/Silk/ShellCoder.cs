@@ -47,6 +47,7 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="output">O    combined pulses vector [len]</param>
         /// <param name="input">I    input vector       [2 * len]</param>
+        /// <param name="input_ptr"></param>
         /// <param name="len">I    number of OUTPUT samples</param>
         internal static void combine_pulses(
             int[] output,
@@ -95,7 +96,9 @@ namespace Concentus.Silk
         /// 
         /// </summary>
         /// <param name="p_child1">O    pulse amplitude of first child subframe</param>
+        /// <param name="child1_ptr"></param>
         /// <param name="p_child2">O    pulse amplitude of second child subframe</param>
+        /// <param name="p_child2_ptr"></param>
         /// <param name="psRangeDec">I/O  Compressor data structure</param>
         /// <param name="p">I    pulse amplitude of current subframe</param>
         /// <param name="shell_table">I    table of shell cdfs</param>
@@ -125,6 +128,7 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="psRangeEnc">I/O  compressor data structure</param>
         /// <param name="pulses0">I    data: nonnegative pulse amplitudes</param>
+        /// <param name="pulses0_ptr"></param>
         internal static void silk_shell_encoder(EntropyCoder psRangeEnc, int[] pulses0, int pulses0_ptr)
         {
             int[] pulses1 = new int[8];

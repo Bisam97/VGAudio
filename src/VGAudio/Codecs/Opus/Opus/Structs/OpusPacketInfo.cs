@@ -110,6 +110,7 @@ namespace Concentus.Structs
         /// Gets the number of samples per frame from an Opus packet.
         /// </summary>
         /// <param name="packet">Opus packet. This must contain at least one byte of data</param>
+        /// <param name="packet_offset"></param>
         /// <param name="Fs">Sampling rate in Hz. This must be a multiple of 400, or inaccurate results will be returned.</param>
         /// <returns>Number of samples per frame</returns>
         public static int GetNumSamplesPerFrame(byte[] packet, int packet_offset, int Fs)
@@ -138,7 +139,8 @@ namespace Concentus.Structs
         /// <summary>
         /// Gets the encoded bandwidth of an Opus packet. Note that you are not forced to decode at this bandwidth
         /// </summary>
-        /// <param name="packet">An Opus packet (must be at least 1 byte)</param>.
+        /// <param name="packet">An Opus packet (must be at least 1 byte)</param>
+        /// <param name="packet_offset"></param>.
         /// <returns>An OpusBandwidth value</returns>
         public static OpusBandwidth GetBandwidth(byte[] packet, int packet_offset)
         {
@@ -164,6 +166,7 @@ namespace Concentus.Structs
         /// Gets the number of encoded channels of an Opus packet. Note that you are not forced to decode with this channel count.
         /// </summary>
         /// <param name="packet">An opus packet (must be at least 1 byte)</param>
+        /// <param name="packet_offset"></param>
         /// <returns>The number of channels</returns>
         public static int GetNumEncodedChannels(byte[] packet, int packet_offset)
         {
@@ -174,6 +177,7 @@ namespace Concentus.Structs
         /// Gets the number of frames in an Opus packet.
         /// </summary>
         /// <param name="packet">An Opus packet</param>
+        /// <param name="packet_offset"></param>
         /// <param name="len">The packet's length (must be at least 1)</param>
         /// <returns>The number of frames in the packet</returns>
         public static int GetNumFrames(byte[] packet, int packet_offset, int len)
@@ -196,6 +200,7 @@ namespace Concentus.Structs
         /// Gets the number of samples of an Opus packet.
         /// </summary>
         /// <param name="packet">An Opus packet</param>
+        /// <param name="packet_offset"></param>
         /// <param name="len">The packet's length</param>
         /// <param name="Fs">The decoder's sampling rate in Hz. This must be a multiple of 400</param>
         /// <returns>The size of the PCM samples that this packet will be decoded to at the specified sample rate</returns>
@@ -221,6 +226,7 @@ namespace Concentus.Structs
         /// </summary>
         /// <param name="dec">Your current decoder state</param>
         /// <param name="packet">An Opus packet</param>
+        /// <param name="packet_offset"></param>
         /// <param name="len">The packet's length</param>
         /// <returns>The size of the PCM samples that this packet will be decoded to by the specified decoder</returns>
         public static int GetNumSamples(OpusDecoder dec,
@@ -234,6 +240,7 @@ namespace Concentus.Structs
         /// Normally there is nothing you can really do with this, other than debugging.
         /// </summary>
         /// <param name="packet">An Opus packet</param>
+        /// <param name="packet_offset"></param>
         /// <returns>The OpusMode used by the encoder</returns>
         public static OpusMode GetEncoderMode(byte[] packet, int packet_offset)
         {

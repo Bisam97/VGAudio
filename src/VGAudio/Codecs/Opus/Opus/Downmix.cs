@@ -51,7 +51,9 @@ namespace Concentus
         /// </summary>
         /// <typeparam name="T">The type of signal being handled (either short or float)</typeparam>
         /// <param name="_x"></param>
+        /// <param name="x_ptr"></param>
         /// <param name="sub"></param>
+        /// <param name="sub_ptr"></param>
         /// <param name="subframe"></param>
         /// <param name="offset"></param>
         /// <param name="c1"></param>

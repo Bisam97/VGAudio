@@ -44,7 +44,9 @@ namespace Concentus.Silk
         /// 
         /// </summary>
         /// <param name="pulses_comb">(O)</param>
+        /// <param name="pulses_comb_ptr"></param>
         /// <param name="pulses_in">(I)</param>
+        /// <param name="pulses_in_ptr"></param>
         /// <param name="max_pulses"> I    max value for sum of pulses</param>
         /// <param name="len">I    number of output values</param>
         /// <returns>return ok</returns>

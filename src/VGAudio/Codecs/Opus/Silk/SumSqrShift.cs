@@ -47,6 +47,7 @@ namespace Concentus.Silk
         /// <param name="energy">O   Energy of x, after shifting to the right</param>
         /// <param name="shift">O   Number of bits right shift applied to energy</param>
         /// <param name="x">I   Input vector</param>
+        /// <param name="x_ptr"></param>
         /// <param name="len">I   Length of input vector</param>
         internal static void silk_sum_sqr_shift(
             out int energy,

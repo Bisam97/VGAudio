@@ -1,16 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0;net451</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <OutputType>Exe</OutputType>
-
     <AssemblyName>VGAudioCli</AssemblyName>
     <AssemblyTitle>VGAudio.Cli</AssemblyTitle>
     <Copyright>Copyright © 2016 Alex Barney</Copyright>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\Bisam97\Desktop\git\VGAudio\src\Backup\VGAudio.Cli\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\VGAudio\VGAudio.csproj" />
   </ItemGroup>
-
 </Project>

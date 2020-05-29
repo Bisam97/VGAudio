@@ -1,8 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
-
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <AssemblyTitle>VGAudio</AssemblyTitle>
     <Authors>Alex Barney</Authors>
     <Copyright>Copyright © 2016 Alex Barney</Copyright>
@@ -14,10 +12,11 @@
     <RepositoryUrl>https://github.com/Thealexbarney/VGAudio</RepositoryUrl>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\Bisam97\Desktop\git\VGAudio\src\Backup\VGAudio\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
     <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0" />
   </ItemGroup>
-
 </Project>

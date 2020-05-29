@@ -210,7 +210,9 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="S">I/O  Resampler state</param>
         /// <param name="output">O    Output signal</param>
+        /// <param name="output_ptr"></param>
         /// <param name="input">I    Input signal</param>
+        /// <param name="input_ptr"></param>
         /// <param name="inLen">I    Number of input samples</param>
         /// <returns></returns>
         internal static int silk_resampler(
@@ -386,8 +388,11 @@ namespace Concentus.Silk
         /// Second order AR filter with single delay elements
         /// </summary>
         /// <param name="S">I/O  State vector [ 2 ]</param>
+        /// <param name="S_ptr"></param>
         /// <param name="out_Q8">O    Output signal</param>
+        /// <param name="out_Q8_ptr"></param>
         /// <param name="input">I    Input signal</param>
+        /// <param name="input_ptr"></param>
         /// <param name="A_Q14">I    AR coefficients, Q14</param>
         /// <param name="len">I    Signal length</param>
         internal static void silk_resampler_private_AR2(
@@ -532,7 +537,9 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="S">I/O  Resampler state</param>
         /// <param name="output">O    Output signal</param>
+        /// <param name="output_ptr"></param>
         /// <param name="input">I    Input signal</param>
+        /// <param name="input_ptr"></param>
         /// <param name="inLen">I    Number of input samples</param>
         internal static void silk_resampler_private_down_FIR(
             SilkResamplerState S,
@@ -617,7 +624,9 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="S">I/O  Resampler state</param>
         /// <param name="output">O    Output signal</param>
+        /// <param name="output_ptr"></param>
         /// <param name="input">I    Input signal</param>
+        /// <param name="input_ptr"></param>
         /// <param name="inLen">I    Number of input samples</param>
         internal static void silk_resampler_private_IIR_FIR(
             SilkResamplerState S,
@@ -671,7 +680,9 @@ namespace Concentus.Silk
         /// </summary>
         /// <param name="S">I/O  Resampler state [ 6 ]</param>
         /// <param name="output">O    Output signal [ 2 * len ]</param>
+        /// <param name="output_ptr"></param>
         /// <param name="input">I    Input signal [ len ]</param>
+        /// <param name="input_ptr"></param>
         /// <param name="len">I    Number of input samples</param>
         internal static void silk_resampler_private_up2_HQ(
             int[] S,

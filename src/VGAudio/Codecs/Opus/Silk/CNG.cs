@@ -48,6 +48,7 @@ namespace Concentus.Silk
         /// Generates excitation for CNG LPC synthesis
         /// </summary>
         /// <param name="exc_Q10">O    CNG excitation signal Q10</param>
+        /// <param name="exc_Q10_ptr"></param>
         /// <param name="exc_buf_Q14">I    Random samples buffer Q10</param>
         /// <param name="Gain_Q16">I    Gain to apply</param>
         /// <param name="length">I    Length</param>
@@ -108,6 +109,7 @@ namespace Concentus.Silk
         /// <param name="psDec">I/O  Decoder state</param>
         /// <param name="psDecCtrl">I/O  Decoder control</param>
         /// <param name="frame">I/O  Signal</param>
+        /// <param name="frame_ptr"></param>
         /// <param name="length">I    Length of residual</param>
         internal static void silk_CNG(
             SilkChannelDecoder psDec,

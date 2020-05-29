@@ -161,13 +161,18 @@ namespace Concentus.Celt
                 y[y_ptr + i] = Inlines.SATURATE16((Inlines.ADD32(Inlines.EXTEND32(x[x_ptr + i]), Inlines.PSHR32(sum, CeltConstants.SIG_SHIFT))));
             }
         }
-        
+
         /// <summary>
         /// OPT: This is the kernel you really want to optimize. It gets used a lot by the prefilter and by the PLC.
         /// </summary>
         /// <param name="x"></param>
+        /// <param name="x_ptr"></param>
         /// <param name="y"></param>
+        /// <param name="y_ptr"></param>
         /// <param name="sum0"></param>
+        /// <param name="sum1"></param>
+        /// <param name="sum2"></param>
+        /// <param name="sum3"></param>
         /// <param name="len"></param>
         internal static void xcorr_kernel(short[] x, int x_ptr, short[] y, int y_ptr, ref int sum0, ref int sum1, ref int sum2, ref int sum3, int len)
         {

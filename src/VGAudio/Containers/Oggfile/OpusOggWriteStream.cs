@@ -35,7 +35,9 @@ namespace Concentus.Oggfile
         // Ogg page parameters
         private short[] _opusFrame;
         private int _opusFrameSamples;
-        private int _opusFrameIndex;
+
+        //private int _opusFrameIndex;
+
         private int _sampleCount = int.MaxValue;
         private int _preSkipSamples = 0;
         private byte[] _currentHeader = new byte[400];
@@ -52,15 +54,18 @@ namespace Concentus.Oggfile
         private const int CHECKSUM_HEADER_POS = 22;
         private const int SEGMENT_COUNT_POS = 26;
         private bool _finalized = false;
-        
+
         /// <summary>
         /// Constructs a stream that will accept PCM audio input, and automatically encode it to Opus and packetize it using Ogg,
         /// writing the output pages to an underlying stream (usually a file stream).
         /// You are allowed to change the encoding parameters mid-stream using the properties of the OpusEncoder; the only thing you
         /// cannot change is the sample rate and num# of channels.
         /// </summary>
-        /// <param name="encoder">An opus encoder to use for output</param>
         /// <param name="outputStream">A base stream to accept the encoded ogg file output</param>
+        /// <param name="sampleRate"></param>
+        /// <param name="channelCount"></param>
+        /// <param name="preSkip"></param>
+        /// <param name="sampleCount"></param>
         /// <param name="fileTags">(optional) A set of tags to include in the encoded file</param>
         /// <param name="inputSampleRate">The actual real sample rate of your input data (NOT the encoder's sample rate).
         /// The opus encoder usually requires 48Khz input, but most MP3s and such will give you 44.1Khz. To get the
@@ -79,7 +84,7 @@ namespace Concentus.Oggfile
             _encoderSampleRate = sampleRate;
             _inputChannels = channelCount;
             _outputStream = outputStream;
-            _opusFrameIndex = 0;
+            //_opusFrameIndex = 0;
             _granulePosition = 0;
             _opusFrameSamples = (int)((long)_encoderSampleRate * FRAME_SIZE_MS / 1000);
             _opusFrame = new short[_opusFrameSamples * _inputChannels];
@@ -130,7 +135,7 @@ namespace Concentus.Oggfile
             _lacingTableCount++;
             _pageFrameCount++;
 
-            _opusFrameIndex = 0;
+            //_opusFrameIndex = 0;
         }
 
         /// <summary>

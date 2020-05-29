@@ -500,6 +500,7 @@ namespace Concentus.Celt
         /// <param name="end"></param>
         /// <param name="bandE"></param>
         /// <param name="bandLogE"></param>
+        /// <param name="bandLogE_ptr"></param>
         /// <param name="C"></param>
         internal static void amp2Log2(CeltMode m, int effEnd, int end,
               int[] bandE, int[] bandLogE, int bandLogE_ptr, int C)

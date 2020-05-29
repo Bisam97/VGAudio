@@ -353,6 +353,7 @@ namespace Concentus.Common.CPlusPlus
         /// !!! IMPORTANT !!! REMEMBER THAT C++ memcpy is (DEST, SOURCE, LENGTH) !!!!
         /// </summary>
         /// <param name="destination"></param>
+        /// <param name="offset"></param>
         /// <param name="length"></param>
 #if DEBUG
         public void MemCopyTo(T[] destination, int destOffset, int length)
@@ -375,6 +376,8 @@ namespace Concentus.Common.CPlusPlus
         /// <summary>
         /// Loads N values from a source array into this pointer's space
         /// </summary>
+        /// <param name="source"></param>
+        /// <param name="sourceOffset"></param>
         /// <param name="length"></param>
 #if DEBUG && !NET35
         public void MemCopyFrom(T[] source, int sourceOffset, int length)

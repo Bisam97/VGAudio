@@ -1,17 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp2.0;net451</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-	
-	<AssemblyName>VGAudioTools</AssemblyName>
+    <AssemblyName>VGAudioTools</AssemblyName>
     <AssemblyTitle>VGAudio.Tools</AssemblyTitle>
     <Copyright>Copyright © 2016 Alex Barney</Copyright>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\Bisam97\Desktop\git\VGAudio\src\Backup\VGAudio.Tools\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\VGAudio\VGAudio.csproj" />
   </ItemGroup>
-
 </Project>
